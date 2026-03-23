@@ -8,13 +8,10 @@ type Props ={
 }
 
 function ImageGrid({images, columns=2, caption}: Props) {
-    console.log('images from ImageGrid, columns', images, columns);
 
     const imageList = typeof images === 'string' 
         ? images.split(',').map(src => src.trim()) 
         : (Array.isArray(images) ? images : []);
-
-    console.log("변환된 이미지 리스트:", imageList);
 
     if (imageList.length === 0) return null;
     const gridCols = {

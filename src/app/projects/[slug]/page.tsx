@@ -19,7 +19,6 @@ const mdxComponents ={
 async function ProjectPage({params}: Props) {
     const {slug} = await params;
     const project = await getProjectData(slug);
-    console.log('[project from ProjectPage]', project);
     const {title, description, date, category, path, thumbnail, gifImage, content, url, repository} = project;
 
   return (
