@@ -39,4 +39,4 @@ Dark mode isn't just a toggle; it's about **UX stability**.
 - **Future Scale**: Planning to migrate from local file-based storage to a Headless CMS (Sanity) as the content volume grows.
 
 ---
-[Live Demo Link](https://blog-silk-six-64.vercel.app) | [GitHub Repo Link](https://github.com/tae0822/Youtube)
+[Live Demo](https://blog-silk-six-64.vercel.app) | [GitHub Repo](https://github.com/tae0822/blog)
