@@ -33,6 +33,14 @@ Dark mode isn't just a toggle; it's about **UX stability**.
 - Standardized prefixing for all container-level elements.
 - **Outcome**: Created a robust, error-proof content template that ensures 100% build stability.
 
+## 🎬 Project Showcase
+
+#### ✅ Optimized Reading Experience & UX Stability
+*Ensuring maximum readability with a flicker-free dark mode and responsive typography that respects user preferences.*
+<img src="https://github.com/user-attachments/assets/edce6dcd-9cbf-4ec2-abca-e120305a1d30" width="100%" />
+
+---
+
 ## 📊 Technical Specs & Growth
 - **Performance**: Lighthouse score of 95+ in SEO and Accessibility.
 - **Type Safety**: 100% TypeScript coverage for content schemas.
