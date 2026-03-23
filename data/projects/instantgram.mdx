@@ -1,0 +1,90 @@
+---
+
+##  1. Project Overview
+**Instantgram** is a high-performance social media application inspired by Instagram. My primary focus was on **building a scalable system architecture**—separating concerns by decoupling the UI from the data fetching logic using a Service Layer. This ensures that the codebase remains scalable and easy to test as the application grows.
+
+- **Core Tech Stack**: <BadgeList 
+items='Next.js(App Router), TypeScript, Tailwind CSS'
+size='large'
+/>
+- **Backend & Auth**:  <BadgeList 
+items='Sanity CMS, NextAuth.js (Google Provider)'
+size='large'
+/>
+
+- **Key Patterns**: <BadgeList 
+items='Service Layer Pattern, Next.js Middleware, GROQ Queries'
+size='large'
+/>
+
+---
+
+##  2. Architecture & Key Features
+
+####  Layered Architecture (API & Service Folders)
+To avoid bloated components and messy API routes, I separated the logic into a dedicated **Service Layer**.
+
+- **Service Layer**: Handles direct interactions with Sanity using GROQ queries.
+- **API Routes**: Act as a bridge between the client-side components and the services.
+- **Impact**: This structure allows the backend to be replaced or modified without impacting UI components.
+
+#### 🔐 Secure Authentication & Access Control
+- **NextAuth.js**: Implemented seamless Google Login and session management.
+- **Middleware**: Created a custom middleware to protect private routes. Unauthenticated users are automatically redirected to the sign-in page, ensuring that only authenticated users can access protected routes.
+
+#### 👥 Social Interactions & Engagement
+- **Following System**: Real-time UI updates for following/unfollowing users.
+- **Feed & Discovery**: Implemented a **Multi-Carousel** for followed users and a performant user search feature with optimized query filtering
+- **Engagement**: Implemented core social interactions including liking, bookmarking, and commenting with immediate UI feedback.
+
+#### 👤 Profile & Deep-Linking
+Dedicated User Profile pages display posts categorized by: **Uploaded**, **Liked**, and **Saved (Bookmarked)**. This required efficient data filtering and optimized GROQ queries to ensure fast loading times.
+
+#### ⚡ Performance Optimization
+- Leveraged Next.js App Router for improved routing and rendering performance.
+- Optimized image delivery using Next/Image and CDN strategies to reduce load time.
+---
+
+
+
+## 3. Project Showcase
+
+#### ✅ Auth Flow & Middleware
+*Secure login flow and route protection via Next.js Middleware.*
+<ImageGrid 
+  images=
+    "/images/projects/instagram-gif04.gif,/images/projects/instagram6.png"
+/>
+---
+
+#### ✅ Social Engagement Loop
+*Real-time posts, bookmarking, liking, commenting, and following actions.*
+<ImageGrid
+ columns='2'
+ images="/images/projects/instagram-gif01.gif,/images/projects/instagram1.png,/images/projects/instagram5.png"
+/>
+---
+
+#### ✅ Search Users, View User Profile & Tabs
+*Categorized post views: Uploaded, Liked, and Bookmarked.*
+<ImageGrid 
+images="/images/projects/instagram-gif02.gif,/images/projects/instagram2.png,/images/projects/instagram4.png"
+/>
+---
+
+#### ✅ Publish New Post
+<ImageGrid 
+images="/images/projects/instagram-gif03.gif,/images/projects/instagram3.png"
+/>
+---
+## 🔥 4. Engineering Challenges & Solutions
+
+#### "The Challenge of Data Relationality in a Headless CMS"
+Managing complex relationships (e.g., *"Does the current user like this post?"*) in a NoSQL-based CMS like Sanity was challenging. 
+
+**Solution**: I optimized my **GROQ queries** to fetch relational data in a single request and utilized **TypeScript Interfaces** to ensure type safety across the entire data flow, reducing runtime errors significantly.
+
+---
+## 🏁 5. Retrospective
+- **What I Learned**:I successfully built a scalable Next.js project structure suitable for production environments. for professional environments. I also learned how to leverage a Headless CMS to handle complex, real-time social data.
+- **Future Improvements**: I plan to implement **Real-time Notifications** using Sanity’s Listeners and further optimize image delivery using **Next/Image** with Sanity's CDN.

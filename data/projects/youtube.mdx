@@ -1,0 +1,77 @@
+---
+
+##  1. Project Overview
+This project focuses on building a YouTube-like video platform with a **decoupled API architecture**, enabling seamless switching between mock data and real API without modifying UI logic.
+
+- **Core Tech Stack**: <BadgeList 
+items='React, Tailwind CSS, Axios, React Router'
+size='large'
+/>
+- **Libraries**:  <BadgeList 
+items='TanStack Query (React Query),timeago.js,'
+size='large'
+/>
+- **Key Patterns**: <BadgeList 
+items='Class-based Client Pattern (Dependency Injection)'
+size='large'
+/>
+
+---
+
+## 2. Architecture & Key Features
+
+### 🏗 Decoupled API Client (The "Mock-First" Approach)
+I implemented a `Youtube` service class that receives an API client via constructor injection, allowing the data source to be swapped without affecting the UI layer.
+
+
+- **Fake Client**: Used local JSON files during development to avoid hitting the 10,000-unit daily limit.
+- **YouTube Client**: Connects to the real Google Cloud endpoint for production.
+- **Testability**: Made it possible to simulate edge cases and control responses for testing.
+- **Development Efficiency**: Enabled full UI development without consuming API quotas.
+- **Benefit**: This architecture allows for easy unit testing and makes the codebase highly maintainable.
+
+### 🏠 Home & Discovery
+The landing page fetches the **"mostPopular"** videos based on the user's region, providing a curated feed immediately upon entry.
+
+- **Relative Time**: Used `timeago` to convert ISO timestamps into human-readable formats like *"2 days ago"*, matching the real YouTube UX.
+
+### 🔍 Search & Video Playback
+- **Data Fetching Optimization**: Managed API calls efficiently using React Query caching to prevent redundant requests.
+- **Routing Flow**: Leveraged React Router for seamless navigation between list and detail views.
+
+---
+
+
+
+## 3. Project Showcase
+#### ✅ Search & Results
+*Searching for "React Tutorial" and fetching dynamic results.*
+<ImageGrid 
+images="/images/projects/youtube-gif02.gif,/images/projects/youtube2.png"
+/>
+---
+#### ✅ Video Detail & Playback
+*Seamless navigation to the detail page with iFrame player.*
+<ImageGrid
+images="/images/projects/youtube-gif01.gif,/images/projects/youtube3.png"
+/>
+---
+#### ✅ Responsive Grid
+*Tailwind CSS ensuring a smooth transition from 4-column desktop to 1-column mobile.*
+<ImageGrid
+images="/images/projects/youtube-gif03.gif"
+/>
+---
+
+## 🔥 4. Engineering Challenges & Solutions
+
+### Managing YouTube API Quotas
+The YouTube Data API has a strict daily quota. To solve this, I implemented a **Switchable Client Architecture**.
+By creating a `FakeYoutubeClient` class that returns mock JSON data, I was able to build and style the entire UI without spending a single API unit. Once the UI was ready, I simply swapped it with the `RealYoutubeClient` in my `App.js` or `ContextProvider`.
+- **Solution**: Designed a client abstraction layer where both `FakeYoutubeClient` and `RealYoutubeClient` share the same interface. This allowed me to switch implementations at runtime without modifying any business logic or UI components.
+---
+
+## 🏁 5. Retrospective
+- **What I Learned**: Learned how to design applications that are independent of external APIs, improving flexibility, testability, and long-term maintainability.
+- **Future Improvements**: I plan to add **Infinite Scroll** for the search results and **Related Video Recommendations** on the detail page.
+- **Performance Optimization**: Utilized React Query caching and background refetching to reduce unnecessary API calls and improve perceived performance.

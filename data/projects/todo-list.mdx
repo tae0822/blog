@@ -1,0 +1,47 @@
+---
+##  1. Project Overview
+**Todo List** is a lightweight React application focused on **efficient client-side state management and UI consistency**, particularly around persistence and initial render performance.
+###  Tech Stack
+- **Core Tech Stack**: <BadgeList 
+items='React, PostCSS, LocalStorage'
+size='large'
+/>
+- **State Strategy**: Optimized state initialization using lazy `useState` and LocalStorage synchronization.
+---
+
+###  2.Project Showcase
+
+#### ✅ Task Management Flow
+Efficiently create, complete, and manage your daily tasks with an intuitive UI.
+<ImageGrid
+images="/images/projects/todo-gif02.gif,/images/projects/todo5.png"
+/>
+---
+
+#### 🌙 Dark Mode & Responsive UI
+Features a fully responsive design and a native Dark Mode for a comfortable visual experience across all devices.
+<ImageGrid
+images="/images/projects/todo-gif01.gif"
+/>
+---
+
+#### 💾 LocalStorage Persistence
+Persistence Strategy**: Synchronized React state with LocalStorage to maintain consistency across sessions without introducing external state libraries.
+<ImageGrid
+images="/images/projects/todo-gif03.gif,/images/projects/todo6.png"
+/>
+---
+
+### 🔥 3.Engineering Challenges
+
+**Optimizing Initial Load & State Synchronization**
+Initially, I encountered a minor "flickering" issue where the UI would briefly show an empty state before loading data from LocalStorage. 
+
+**Solution**: Used React’s lazy state initialization (`useState(() => ...)`) to read from LocalStorage during the initial render phase. This eliminated UI flickering and ensured consistent state hydration from the very first paint.
+
+---
+
+### 🏁 4.Retrospective
+- **What I Learned**: Learned how small inefficiencies in state initialization can impact user experience, and how to optimize rendering behavior in React without adding unnecessary complexity.
+- **UX Detail**: Designed to minimize unnecessary re-renders and provide instant feedback for user actions.
+- **Future Improvements**: I plan to implement **Drag-and-Drop** functionality for task reordering and explore **IndexDB** for handling larger datasets.

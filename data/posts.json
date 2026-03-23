@@ -1,0 +1,66 @@
+[
+  {
+    "title": "JavaScript Basics",
+    "description": "Comprehensive guide from fundamental syntax to practical usage",
+    "date": "2026-02-02",
+    "category": "javascript",
+    "path": "javascript-basic",
+    "featured": false
+  },
+  {
+    "title": "10 JavaScript Pro Tips!",
+    "description": "10 tips to use JavaScript like a professional",
+    "date": "2026-02-15",
+    "category": "javascript",
+    "path": "javascript-10-tips",
+    "featured": true
+  },
+  {
+    "title": "Node.js Basics",
+    "description": "Complete overview of basic Node.js usage",
+    "date": "2025-12-16",
+    "category": "backend",
+    "path": "node-basic",
+    "featured": false
+  },
+  {
+    "title": "2024 Year in Review",
+    "description": "Summary of the skills I learned and thoughts I had throughout 2024",
+    "date": "2025-01-26",
+    "category": "my story",
+    "path": "review-2024",
+    "featured": false
+  },
+  {
+    "title": "Node.js Pro Tips!",
+    "description": "All tips to use Node.js like a pro",
+    "date": "2026-01-10",
+    "category": "backend",
+    "path": "node-pro-tips",
+    "featured": true
+  },
+  {
+    "title": "React Best Practices!",
+    "description": "Guidelines for using React correctly and efficiently",
+    "date": "2026-02-01",
+    "category": "frontend",
+    "path": "best-react-practices",
+    "featured": true
+  },
+  {
+    "title": "React 18 Walkthrough",
+    "description": "Overview of the new features added in React 18",
+    "date": "2026-02-17",
+    "category": "frontend",
+    "path": "react18-walkthrough",
+    "featured": true
+  },
+  {
+    "title": "2025 Year in Review",
+    "description": "Summary of the skills I learned and thoughts I had throughout 2025",
+    "date": "2026-02-20",
+    "category": "my story",
+    "path": "review-2025",
+    "featured": true
+  }
+]

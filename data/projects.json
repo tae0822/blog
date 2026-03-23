@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Instantgram",
+        "description": "Full-stack Instagram clone using Next.js, NextAuth, and Sanity CMS.",
+        "date": "2026-03-15",
+        "category": "Next.Js, Sanity, NextAuth",
+        "path": "instantgram",
+        "thumbnail": "/images/projects/instagram1.png",
+        "hoverImage": "/images/projects/instagram2.png",
+        "gifImage":"/images/projects/instagram-gif01.gif",
+        "url":"https://instantgram-nine.vercel.app",
+        "repository":"https://github.com/tae0822/Instantgram"
+    },
+    { 
+        "title":"Shoppy",
+        "description": "E-commerce platform with Admin RBAC and real-time cart management.",
+        "date": "2026-03-02",
+        "category": "React, Firebase, Cloudinary",
+        "path": "shoppy",
+        "thumbnail": "/images/projects/shoppy1.png",
+        "hoverImage": "/images/projects/shoppy2.png",
+        "gifImage":"/images/projects/shoppy-gif01.gif",
+        "url":"https://shoppy-peach.vercel.app",
+        "repository":"https://github.com/tae0822/shoppy"
+
+    },
+    {
+        "title":"Youtube Clone",
+        "description": "Video search and playback app using YouTube Data API and Class-based Architecture.",
+        "date": "2026-02-21",
+        "category": "React, Axios",
+        "path": "youtube",
+        "thumbnail": "/images/projects/youtube2.png",
+        "hoverImage": "/images/projects/youtube1.png",
+        "gifImage":"/images/projects/youtube-gif01.gif",
+        "url":"https://youtube-lyart-pi.vercel.app",
+        "repository":"https://github.com/tae0822/Youtube"
+
+    },
+     {
+        "title":"Blog",
+        "description": "A high-performance personal platform featuring a hybrid MD/MDX content system, dynamic SEO optimization, and a full-stack contact service integrated with Nodemailer.",
+        "date": "2026-02-15",
+        "category": "Next.Js, Nodemailer",
+        "path": "blog",
+        "thumbnail": "/images/projects/blog1.png",
+        "hoverImage": "/images/projects/blog2.png",
+        "gifImage":"/images/projects/blog-gif01.gif",
+        "url":"https://todo-list-project-swart-sigma.vercel.app",
+        "repository":"https://github.com/tae0822/Todo-List-Project"
+    },
+    {
+        "title":"Todo List",
+        "description": "Productivity tool with persistent storage, filtering, and dark mode.",
+        "date": "2026-02-08",
+        "category": "React, LocalStroage",
+        "path": "todo-list",
+        "thumbnail": "/images/projects/todo1.png",
+        "hoverImage": "/images/projects/todo2.png",
+        "gifImage":"/images/projects/todo-gif01.gif",
+        "url":"https://todo-list-project-swart-sigma.vercel.app",
+        "repository":"https://github.com/tae0822/Todo-List-Project"
+    }
+]
+
