@@ -1,5 +1,6 @@
 import ProjectHero from '@/components/mdx/ProjectHero';
 import { getProjectData } from '@/service/projects';
+import { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import dynamic from 'next/dynamic';
 import React from 'react'
@@ -9,7 +10,6 @@ type Props ={
         slug: string;
     }
 }
-// Client Components dynamic import
 
 const ClientImageGrid = dynamic(() => import('@/components/mdx/ImageGrid'), { ssr: false });
 const ClientBadgeList = dynamic(() => import('@/components/UI/BadgeList'), { ssr: false });
@@ -18,6 +18,11 @@ const mdxComponents = {
   ImageGrid: ClientImageGrid,
   BadgeList: ClientBadgeList,
 };
+
+export async function generateMetadata({params: {slug}}:Props):Promise<Metadata>{
+    const {title, description} = await getProjectData(slug);
+    return {title, description}
+}
 
 async function ProjectPage({params}: Props) {
     const {slug} = await params;
