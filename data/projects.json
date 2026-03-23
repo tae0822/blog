@@ -46,8 +46,8 @@
         "thumbnail": "/images/projects/blog1.png",
         "hoverImage": "/images/projects/blog2.png",
         "gifImage":"/images/projects/blog-gif01.gif",
-        "url":"https://todo-list-project-swart-sigma.vercel.app",
-        "repository":"https://github.com/tae0822/Todo-List-Project"
+        "url":"blog-silk-six-64.vercel.app",
+        "repository":"https://github.com/tae0822/blog"
     },
     {
         "title":"Todo List",
