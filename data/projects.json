@@ -46,7 +46,7 @@
         "thumbnail": "/images/projects/blog1.png",
         "hoverImage": "/images/projects/blog2.png",
         "gifImage":"/images/projects/blog-gif01.gif",
-        "url":"blog-silk-six-64.vercel.app",
+        "url":"https://blog-silk-six-64.vercel.app",
         "repository":"https://github.com/tae0822/blog"
     },
     {

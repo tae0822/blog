@@ -4,7 +4,6 @@ import ProjectCard from './ProjectCard';
 
 async function MyProjects() {
   const projects = await getAllProjects();
-  console.log('[projects from MyProjects]', projects)
 
   return (
     <section className='my-4'>

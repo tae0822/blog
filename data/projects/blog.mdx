@@ -1,90 +1,81 @@
 ---
-##  1. Project Overview
-**Tae’s Tech Blog** is a personal publishing platform built with Next.js, focused on combining **static content generation with dynamic UI components** through a hybrid MD/MDX architecture.
+## 1. Project Overview
+**Tae's Tech Blog** is a personal publishing platform built with Next.js, focused on combining **static content generation with dynamic UI components** through a hybrid MD/MDX architecture.
 
-- **Core Tech Stack**: <BadgeList 
-items='Next.js (App Router), TypeScript, Tailwind CSS, MDX'
-size='large'
-/>
-- **Integrations & Backend**: <BadgeList 
-items='Nodemailer, Next-Themes, Contentlayer'
-size='large'
-/>
-- **Key Features**: <BadgeList 
-items='SEO Metadata API, Dark Mode, Contact Service'
-size='large'
-/>
+**Core Tech Stack**
+<BadgeList items='Next.js, TypeScript, Tailwind CSS, MDX' size='large' />
+
+**Integrations & Backend**
+<BadgeList items='Nodemailer, Next-Themes, Contentlayer' size='large' />
+
+**Key Features**
+<BadgeList items='SEO Metadata API, Dark Mode, Contact Service' size='large' />
 
 ---
 
-##  2. Architecture & Key Features
+## 2. Architecture & Key Features
 
 #### 📑 Hybrid Content Management (MD vs. MDX)
-I designed a hybrid content system where Markdown is used for simple posts, while MDX is used for technical articles requiring interactive components.
-This allowed me to maintain fast writing workflows while enabling rich, component-driven documentation when needed.
+I designed a hybrid content system where Markdown is used for simple posts, while MDX is used for technical articles requiring interactive components. This allowed me to maintain fast writing workflows while enabling rich, component-driven documentation when needed.
+
 - **Markdown (.md)**: Used for standard blog posts to ensure maximum writing speed and simplicity.
-- **MDX (.mdx)**: Reserved for project deep-dives, allowing the embedding of **Custom React Components** directly within the documentation.
+- **MDX (.mdx)**: Reserved for project deep-dives, allowing the embedding of Custom React Components directly within the documentation.
 - **Contentlayer**: Utilized to transform content into type-safe JSON data, making it easy to query and render with full TypeScript support.
-- **Scalability**: The MDX-based system allows easy expansion for future features like interactive docs, code demos, or embedded UI components.
 
 #### 🔍 Strategic SEO & Performance
-- **Metadata API**: Implemented dynamic SEO for every page. Each post automatically generates unique meta tags, OpenGraph images, and descriptions to maximize search engine visibility.
-- **Perfor- **Type Safety**: Contentlayer generates typed data from markdown files, eliminating runtime errors when rendering content.
+- **Metadata API**: Implemented dynamic SEO for every page. Each post automatically generates unique meta tags.
+- **Performance**: Contentlayer generates typed data from markdown files, eliminating runtime errors.
 
 #### ✉️ Full-Stack Communication (Nodemailer)
-- **Direct Mail Service**: Built a custom API route using **Nodemailer** to handle contact form submissions.
-- **Serverless Integration**: Developed a secure backend flow that allows users to send inquiries directly to my personal email without needing an external database.
+- **Direct Mail Service**: Built a custom API route using Nodemailer to handle contact form submissions.
+- **Serverless Integration**: Developed a secure backend flow to send inquiries directly to personal email.
 
 #### 🌙 Advanced Theme Engineering
 - **Next-Themes**: Implemented a flicker-free Dark Mode that respects system preferences.
-- **Hydration Stability**: Prevented hydration mismatches by deferring theme rendering until client mount, ensuring consistent UI between server and client.
+- **Hydration Stability**: Prevented hydration mismatches by deferring theme rendering until client mount.
+
 ---
 
-## 🎬 3. Project Showcase
-
-
+## 3. Project Showcase
 
 #### ✅ Dark Mode & Adaptive UI
 *Seamless theme transitions and mobile-first responsive layouts.*
-<ImageGrid
-  columns='2'
-  images="/images/projects/blog-gif02.gif, /images/projects/blog2.png"
-/>
+
+<ImageGrid columns='2' images="/images/projects/blog-gif02.gif, /images/projects/blog2.png" />
+
 ---
 
 #### ✅ Content & Portfolio Organization
 *Clean, categorized views for both daily blog posts and technical projects.*
-<ImageGrid 
-  images="/images/projects/blog-gif01.gif, /images/projects/blog1.png"
-/>
+
+<ImageGrid images="/images/projects/blog-gif01.gif, /images/projects/blog1.png" />
+
 ---
 
 #### ✅ Dynamic Content Filtering
 *Efficiently browse posts using a custom category filtering system built with React State.*
-- **Client-Side Filtering**: Implemented a filterable UI using React state to instantly update post lists without additional server requests.
-<ImageGrid 
-  images="/images/projects/blog-gif04.gif, /images/projects/blog3.png"
-/>
+
+<ImageGrid images="/images/projects/blog-gif04.gif, /images/projects/blog3.png" />
+
 ---
+
 #### ✅ Automated Contact Service
 *Fully functional contact form integrated with a server-side mailing engine.*
-<ImageGrid 
-  images="/images/projects/blog-gif05.gif,/images/projects/blog5.png"
-/>
+
+<ImageGrid images="/images/projects/blog-gif05.gif, /images/projects/blog5.png" />
+
 ---
 
 ## 🔥 4. Engineering Challenges & Solutions
 
-#### "Solving the Hydration Mismatch in Themed Layouts"
-When using `next-themes` with the App Router, the mismatch between the server-rendered HTML and the client’s theme preference often caused UI glitches or console errors.
-This approach eliminated UI flickering and ensured a consistent first paint experience.
+#### Solving the Hydration Mismatch in Themed Layouts
+When using next-themes with the App Router, the mismatch between the server-rendered HTML and the client’s theme preference often caused UI glitches or console errors.
 
-**Solution**: I implemented a **Mounted State Pattern** within a custom wrapper and used the `suppressHydrationWarning` attribute on the `<html>` tag. This ensured that the theme provider only synchronized after the client-side mount, resulting in a perfectly stable initial render.
+**Solution**: I implemented a **Mounted State Pattern** within a custom wrapper and used the `suppressHydrationWarning` attribute on the `<html>` tag. This ensured that the theme provider only synchronized after the client-side mount.
 
 ---
 
 ## 🏁 5. Retrospective
-- **What I Learned**: Learned how to design a flexible content system using MDX and manage SEO effectively with Next.js Metadata API.
-- **Technical Growth**: Successfully bridged frontend aesthetics with backend utility through **Nodemailer** API integration.
-
-- **Future Roadmap**: I plan to add **Search Functionality** using Algolia and implement **ISR (Incremental Static Regeneration)** to update content without full site rebuilds.
+- **What I Learned**: Learned how to design a flexible content system using MDX and manage SEO effectively.
+- **Technical Growth**: Successfully bridged frontend aesthetics with backend utility through Nodemailer API integration.
+- **Future Roadmap**: I plan to add Search Functionality using Algolia and implement ISR.

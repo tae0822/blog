@@ -1,8 +1,7 @@
-import ImageGrid from '@/components/mdx/ImageGrid';
 import ProjectHero from '@/components/mdx/ProjectHero';
-import BadgeList from '@/components/UI/BadgeList';
 import { getProjectData } from '@/service/projects';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import dynamic from 'next/dynamic';
 import React from 'react'
 
 type Props ={
@@ -10,16 +9,20 @@ type Props ={
         slug: string;
     }
 }
+// Client Components dynamic import
 
-const mdxComponents ={
-    ImageGrid,
-    BadgeList,
-}
+const ClientImageGrid = dynamic(() => import('@/components/mdx/ImageGrid'), { ssr: false });
+const ClientBadgeList = dynamic(() => import('@/components/UI/BadgeList'), { ssr: false });
+
+const mdxComponents = {
+  ImageGrid: ClientImageGrid,
+  BadgeList: ClientBadgeList,
+};
 
 async function ProjectPage({params}: Props) {
     const {slug} = await params;
     const project = await getProjectData(slug);
-    const {title, description, date, category, path, thumbnail, gifImage, content, url, repository} = project;
+    const {title, description, gifImage, content, url, repository} = project;
 
   return (
     <article className='rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4 dark:text-black w-full'>
