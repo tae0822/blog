@@ -30,8 +30,11 @@ async function ProjectPage({params}: Props) {
     const {title, description, gifImage, content, url, repository} = project;
 
   return (
-    <article className='rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4 dark:text-black w-full'>
-        <ProjectHero 
+    <article 
+    className='project-card rounded-2xl overflow-hidden shadow-lg m-4 dark:text-black w-full'
+    style={{ backgroundColor: 'var(--project-bg)' }}
+    >
+        <ProjectHero
         image={gifImage}
         title={title}
         description={description}

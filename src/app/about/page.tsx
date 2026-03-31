@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: `Tae's information`,
 };
 
-const TITLE_CLASS = 'text-2xl font-bold text-gray-800 mt-2';
-const SUBTITLE_CLASS = 'text-lg font-bold my-2 md:text-xl'
+const TITLE_CLASS = 'text-2xl font-bold text-gray-800 dark:text-gray-800 mt-2';
+const SUBTITLE_CLASS = 'text-lg font-bold my-2 md:text-xl !text-gray-800'
 
 export default function AboutPage() {
   return (
